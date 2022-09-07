@@ -1,0 +1,1234 @@
+﻿{
+    "Sheet1": [
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Wirausaha"
+        },
+        {
+            "pekerjaan": "Lainnya"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Pedagang Kecil"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Sudah Meninggal"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Sudah Meninggal"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Lainnya"
+        },
+        {
+            "pekerjaan": "Wirausaha"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Pedagang Kecil"
+        },
+        {
+            "pekerjaan": "Sudah Meninggal"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Karyawan Swasta"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "PNS/TNI/Polri"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Karyawan Swasta"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Karyawan Swasta"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Nelayan"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "PNS/TNI/Polri"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Lainnya"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Petani"
+        },
+        {
+            "pekerjaan": "Karyawan Swasta"
+        },
+        {
+            "pekerjaan": "Petani"
+        },
+        {
+            "pekerjaan": "Petani"
+        },
+        {
+            "pekerjaan": "Lainnya"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Wirausaha"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Sudah Meninggal"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "PNS/TNI/Polri"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Pedagang Kecil"
+        },
+        {
+            "pekerjaan": "Pedagang Kecil"
+        },
+        {
+            "pekerjaan": "Nelayan"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "PNS/TNI/Polri"
+        },
+        {
+            "pekerjaan": "Petani"
+        },
+        {
+            "pekerjaan": "Pensiunan"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Petani"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Petani"
+        },
+        {
+            "pekerjaan": "PNS/TNI/Polri"
+        },
+        {
+            "pekerjaan": "Petani"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Wirausaha"
+        },
+        {
+            "pekerjaan": "Pedagang Kecil"
+        },
+        {
+            "pekerjaan": "Wirausaha"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Petani"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Petani"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Nelayan"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Karyawan Swasta"
+        },
+        {
+            "pekerjaan": "Pensiunan"
+        },
+        {
+            "pekerjaan": "PNS/TNI/Polri"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "PNS/TNI/Polri"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Nelayan"
+        },
+        {
+            "pekerjaan": "Petani"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Lainnya"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "PNS/TNI/Polri"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Petani"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Nelayan"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Petani"
+        },
+        {
+            "pekerjaan": "Lainnya"
+        },
+        {
+            "pekerjaan": "Petani"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Lainnya"
+        },
+        {
+            "pekerjaan": "Pedagang Kecil"
+        },
+        {
+            "pekerjaan": "Lainnya"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Tidak dapat diterapkan"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Karyawan Swasta"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Pedagang Kecil"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Petani"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Karyawan Swasta"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Pedagang Kecil"
+        },
+        {
+            "pekerjaan": "Petani"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Lainnya"
+        },
+        {
+            "pekerjaan": "Lainnya"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Sudah Meninggal"
+        },
+        {
+            "pekerjaan": "Lainnya"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Lainnya"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Petani"
+        },
+        {
+            "pekerjaan": "Lainnya"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Lainnya"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Pedagang Kecil"
+        },
+        {
+            "pekerjaan": "Petani"
+        },
+        {
+            "pekerjaan": "PNS/TNI/Polri"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Karyawan Swasta"
+        },
+        {
+            "pekerjaan": "Petani"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Pedagang Kecil"
+        },
+        {
+            "pekerjaan": "Nelayan"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Karyawan Swasta"
+        },
+        {
+            "pekerjaan": "Pedagang Kecil"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Karyawan Swasta"
+        },
+        {
+            "pekerjaan": "Petani"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Petani"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Petani"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "PNS/TNI/Polri"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Karyawan Swasta"
+        },
+        {
+            "pekerjaan": "Pedagang Kecil"
+        },
+        {
+            "pekerjaan": "Lainnya"
+        },
+        {
+            "pekerjaan": "Petani"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Lainnya"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "PNS/TNI/Polri"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Pedagang Besar"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Lainnya"
+        },
+        {
+            "pekerjaan": "PNS/TNI/Polri"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Pedagang Kecil"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Sudah Meninggal"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Pedagang Kecil"
+        },
+        {
+            "pekerjaan": "Karyawan Swasta"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Lainnya"
+        },
+        {
+            "pekerjaan": "Lainnya"
+        },
+        {
+            "pekerjaan": "Petani"
+        },
+        {
+            "pekerjaan": "Peternak"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "PNS/TNI/Polri"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Pedagang Kecil"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Karyawan Swasta"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "PNS/TNI/Polri"
+        },
+        {
+            "pekerjaan": "Petani"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Petani"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "PNS/TNI/Polri"
+        },
+        {
+            "pekerjaan": "Sudah Meninggal"
+        },
+        {
+            "pekerjaan": "Karyawan Swasta"
+        },
+        {
+            "pekerjaan": "Lainnya"
+        },
+        {
+            "pekerjaan": "Wirausaha"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Petani"
+        },
+        {
+            "pekerjaan": "PNS/TNI/Polri"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Lainnya"
+        },
+        {
+            "pekerjaan": "Karyawan Swasta"
+        },
+        {
+            "pekerjaan": "Lainnya"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Karyawan Swasta"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Pedagang Besar"
+        },
+        {
+            "pekerjaan": "Lainnya"
+        },
+        {
+            "pekerjaan": "PNS/TNI/Polri"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Lainnya"
+        },
+        {
+            "pekerjaan": "Karyawan Swasta"
+        },
+        {
+            "pekerjaan": "Pedagang Kecil"
+        },
+        {
+            "pekerjaan": "Karyawan Swasta"
+        },
+        {
+            "pekerjaan": "Karyawan Swasta"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "PNS/TNI/Polri"
+        },
+        {
+            "pekerjaan": "Pedagang Kecil"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Petani"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Petani"
+        },
+        {
+            "pekerjaan": "Pensiunan"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Petani"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Petani"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Lainnya"
+        },
+        {
+            "pekerjaan": "Lainnya"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Pensiunan"
+        },
+        {
+            "pekerjaan": "Lainnya"
+        },
+        {
+            "pekerjaan": "Lainnya"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Sudah Meninggal"
+        },
+        {
+            "pekerjaan": "Pedagang Kecil"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Petani"
+        },
+        {
+            "pekerjaan": "Lainnya"
+        },
+        {
+            "pekerjaan": "Lainnya"
+        },
+        {
+            "pekerjaan": "Karyawan Swasta"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Lainnya"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Wirausaha"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Sudah Meninggal"
+        },
+        {
+            "pekerjaan": "Karyawan Swasta"
+        },
+        {
+            "pekerjaan": "Wirausaha"
+        },
+        {
+            "pekerjaan": "Sudah Meninggal"
+        },
+        {
+            "pekerjaan": "PNS/TNI/Polri"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Lainnya"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Lainnya"
+        },
+        {
+            "pekerjaan": "Karyawan Swasta"
+        },
+        {
+            "pekerjaan": "Lainnya"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Lainnya"
+        },
+        {
+            "pekerjaan": "Lainnya"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Karyawan Swasta"
+        },
+        {
+            "pekerjaan": "Karyawan Swasta"
+        },
+        {
+            "pekerjaan": "Sudah Meninggal"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Wirausaha"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Karyawan Swasta"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Lainnya"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Pedagang Kecil"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Tidak bekerja"
+        },
+        {
+            "pekerjaan": "Pedagang Kecil"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "PNS/TNI/Polri"
+        },
+        {
+            "pekerjaan": "Pedagang Besar"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Buruh"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        },
+        {
+            "pekerjaan": "Wiraswasta"
+        }
+    ]
+}

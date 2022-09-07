@@ -1,0 +1,17 @@
+body{
+  min-height: 100%;
+  min-width: 100%;
+  background-image: url("../images/bg.png");
+}
+
+#content{
+  min-height: 600px;
+}
+
+.panel-info{
+  min-height: 227px;
+}
+
+.sejarah{
+  padding: 15px;
+}

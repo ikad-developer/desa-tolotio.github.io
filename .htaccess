@@ -1,0 +1,3 @@
+RewriteEngine On
+
+RewriteRule ^cetak/(.*)/([0-9]+)$ cetak.php?kategori=$1&nik=$2
