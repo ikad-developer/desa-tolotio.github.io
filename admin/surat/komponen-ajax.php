@@ -1,44 +1,38 @@
 <?php
 require 'functions.php';
 
-if(isset($_POST['cari'])){
-  $cari = $_POST['cari'];
-  $query = query("SELECT * FROM `penduduk` WHERE nik LIKE '%$cari%' OR nama LIKE '%$cari%' ");
+if (isset($_POST['kategori-surat'])) {
+  $kategori = $_POST['kategori-surat'];
+  switch ($kategori) {
+    case 'Surat Keterangan Penghasilan Orang Tua':
 ?>
-<select multiple class="form-control" id="exampleFormControlSelect2" style="margin-top:1.5px">
+      <div class="form-group row">
+        <label for="inputPassword" class="col-sm-4 col-form-label">Nama Pemohon</label>
+        <div class="col-sm-8">
+          <input type="password" class="form-control" id="inputPassword">
+        </div>
+      </div>
 <?php
-  if(mysqli_num_rows($query)>0){
-    while($data = mysqli_fetch_assoc($query)){
-?>
-  <option class="pilih-nama" value="<?= $data['nik']; ?>"><?= $data['nama']; ?></option>
-<?php
+      break;
   }
-}else{
-?>
-  <option disabled>Tidak ada data</option>
-<?php
-}
-?>
-</select>
-<?php
 }
 ?>
 
 <script>
-  $(document).ready(function(){
-    $('.pilih-nama').click(function(){
+  $(document).ready(function() {
+    $('.pilih-nama').click(function() {
       var nama = $(this).text();
       var nik = $(this).val();
       $('#cari').val(nama);
-      $('#cari').attr('data-id',nik);
+      $('#cari').attr('data-id', nik);
       $('#autocomplete').html("");
 
       var kategori = $('#kategori').val();
       var nik = $('#cari').attr('data-id');
-      if(kategori != '' && nik !=''){
+      if (kategori != '' && nik != '') {
         $('#cetak').removeAttr('disabled');
-      }else{
-        $('#cetak').attr('disabled','disabled');
+      } else {
+        $('#cetak').attr('disabled', 'disabled');
       }
     })
 

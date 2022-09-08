@@ -2,85 +2,58 @@
 require 'functions.php';
 $_SESSION['menu'] = 'surat';
 ?>
-<h4 class="mt-2">Buat Surat</h4>
-<div class="row">
-  <div class="col-4">
-    <div class="form-group">
-      <label for="cari">Pilih nama</label>
-      <input type="text" class="form-control" id="cari" placeholder="Masukkan Nama atau NIK" data-id="">
-      <div id="autocomplete" style="position:absolute; width:93%"></div>
-    </div>
-  </div>
-  <div class="col-3">
-    <div class="form-group">
-      <label for="kategori">Pilih Surat</label>
-      <select class="form-control" id="kategori">
-        <option value="">Pilih surat</option>
-        <option value="surat-keterangan-kurang-mampu">Surat Keterangan Miskin</option>
-      </select>
-    </div>
-  </div>
-  <div class="col-4">
-    <div class="form-group">
-      <label for="no-surat">No Surat</label>
-      <input type="text" class="form-control" id="no-surat">
-    </div>
-  </div>
-  <div class="col-1">
-    <button type="button" class="btn btn-primary" id="cetak" disabled style="margin-top:31px">Cetak</button>
-  </div>
-</div>
 
-<center><h4 class="mt-4">Riwayat Surat Keluar</h4></center>
-<div id="tabel-surat-keluar">
+<ul class="nav nav-tabs mt-2" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="home-tab" data-toggle="tab" data-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Buat Surat</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="profile-tab" data-toggle="tab" data-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Surat masuk</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="contact-tab" data-toggle="tab" data-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Surat Keluar</button>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active pt-2" id="home" role="tabpanel" aria-labelledby="home-tab">
+    <div class="row">
+      <div class="col-lg-5">
+        <div class="form-group">
+          <select class="form-control" id="jenis-surat">
+            <option>--Pilih Surat--</option>
+            <option value="Surat Keterangan Penghasilan Orang Tua">Surat Keterangan Penghasilan Orang Tua</option>
+          </select>
+        </div>
+        <div id="komponen-surat"></div>
+      </div>
+      <div class="col-lg-6"></div>
+    </div>
+  </div>
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
 </div>
 
 <script>
-  $(document).ready(function(){
+  $(document).ready(function() {
     $('#tabel-surat-keluar').load('surat/tabel-riwayat-surat.php');
-    $('#cari').keyup(function(){
-      var keyword = $(this).val();
-      if(keyword.length > 2){
+
+    $('#jenis-surat').change(function() {
+      var surat = $(this).val();
+      if (surat != '') {
         $.ajax({
-          beforeSend : function(){ $('#autocomplete').html("") },
-          url : 'surat/komponen-ajax.php',
-          data : 'cari=' + keyword,
-          type : 'post',
-          success : function(respon){
-            $('#autocomplete').html(respon);
+          beforeSend: function() {
+            $('#jenis-surat').attr('disabled', 'disabled')
+          },
+          url: 'surat/komponen-ajax.php',
+          data: 'kategori-surat=' + surat,
+          type: 'post',
+          success: function(respon) {
+            $('#jenis-surat').removeAttr('disabled')
+            $('#komponen-surat').html(respon);
           }
         })
-      }else{
-        $("#autocomplete").html("");
       }
     })
 
-    $('#kategori').change(function(){
-      var kategori = $(this).val();
-      var nik = $('#cari').attr('data-id');
-      if(kategori != '' && nik !=''){
-        $('#cetak').removeAttr('disabled');
-      }else{
-        $('#cetak').attr('disabled','disabled');
-      }
-    })
-
-    $('#cetak').click(function(){
-      var kategori = $('#kategori').val();
-      var nik = $('#cari').attr('data-id');
-      var no_surat = $('#no-surat').val();
-      $.ajax({
-        beforeSend : function(){ $('#cetak').attr('disabled','disabled') },
-        url : 'surat/proses.php',
-        data : 'cetak=true&kategori=' + kategori + '&nik=' + nik + '&no-surat=' + no_surat,
-        type : 'post',
-        success : function(respon){
-          window.open(respon,'_blank');
-          setTimeout(() => {
-            location.reload();
-          }, 1500);
-        }
-      })
-    })
   })
 </script>
