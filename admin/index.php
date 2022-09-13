@@ -13,7 +13,8 @@ require 'functions.php';
   <!-- Favicon-->
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
   <!-- Core theme CSS (includes Bootstrap)-->
-  <!-- Bootstrap CSS -->
+  <!-- Bootstrap CSS
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"> -->
   <link rel="stylesheet" href="../css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
   <link rel="shortcut icon" href="../images/logo pemerintah.png">
   <link rel="stylesheet" href="../css/style.css">
@@ -77,6 +78,7 @@ require 'functions.php';
     </div>
     <script src="../js/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="../js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/xcash/bootstrap-autocomplete@master/dist/latest/bootstrap-autocomplete.min.js"></script>
     <script src="../js/chart.js"></script>
     <script src="../js/f83cbade83.js"></script>
     <script src="../js/jquery.easy-ticker.js"></script>
@@ -97,6 +99,8 @@ require 'functions.php';
           var url = $('#' + menu).attr('data-url');
           load_halaman(url, menu);
         }
+
+        // $('.form-control').attr('autocomplete', 'off');
 
 
         $('.menu').click(function() {

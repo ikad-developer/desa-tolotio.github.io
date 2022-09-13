@@ -79,7 +79,8 @@ function keterangan_miskin($no_surat, $kades, $nama, $jk, $ttl, $umur, $pekerjaa
     </table>
     <p style="text-align:justify; text-indent:40px; line-height:28px">Dengan ini menerangkan bahwa yang bersangkutan berpenghasilan rendah/minim berkisar kurang lebih Rp. 500.000,-/bulan.</p>
     <p style="text-align:justify; line-height:28px">Surat keterangan ini diberikan Kepada saudara CICI ARWANDA MALATIA Sebagai Persyaratan mendaftar Kuliah di Universitas Bina Taruna.</p>
-    <p style="text-align:justify; line-height:28px">Demikian surat keterangan ini dibuat untuk dapat dipergunakan sebagaimana mestinya.</p>
+    <p style="text-align:justify; line-height:28px">Demikian surat keterangan ini dibuat untuk dapat dipergunakan sebagaimana mestinya.
+    </p>
     <table>
       <tr>
         <td width="290px"></td>

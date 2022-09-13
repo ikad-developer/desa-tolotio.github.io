@@ -1,65 +1,67 @@
 <?php
-$koneksi = mysqli_connect("localhost","root","","Tamboo");
+$koneksi = mysqli_connect("localhost", "root", "", "Tolotio");
 
 $basis_url = 'http://localhost/Tamboo/';
 
 $pengacak = 'LATIPONGOPEE';
 
-function query($query){
+function query($query)
+{
 	global $koneksi;
-	return mysqli_query($koneksi,$query);
+	return mysqli_query($koneksi, $query);
 }
 
-function rupiah($angka){
-	
-	$hasil_rupiah = "Rp " . number_format($angka,0,',','.');
+function rupiah($angka)
+{
+
+	$hasil_rupiah = "Rp " . number_format($angka, 0, ',', '.');
 	return $hasil_rupiah;
- 
 }
 
-function hari_ini(){
-	$hari = date ("D");
- 
-	switch($hari){
+function hari_ini()
+{
+	$hari = date("D");
+
+	switch ($hari) {
 		case 'Sun':
 			$hari_ini = "Minggu";
-		break;
- 
-		case 'Mon':			
+			break;
+
+		case 'Mon':
 			$hari_ini = "Senin";
-		break;
- 
+			break;
+
 		case 'Tue':
 			$hari_ini = "Selasa";
-		break;
- 
+			break;
+
 		case 'Wed':
 			$hari_ini = "Rabu";
-		break;
- 
+			break;
+
 		case 'Thu':
 			$hari_ini = "Kamis";
-		break;
- 
+			break;
+
 		case 'Fri':
 			$hari_ini = "Jumat";
-		break;
- 
+			break;
+
 		case 'Sat':
 			$hari_ini = "Sabtu";
-		break;
-		
+			break;
+
 		default:
-			$hari_ini = "Tidak di ketahui";		
-		break;
+			$hari_ini = "Tidak di ketahui";
+			break;
 	}
- 
+
 	return "<b>" . $hari_ini . "</b>";
- 
 }
 
-function tgl_indo($tanggal){
-	$bulan = array (
+function tgl_indo($tanggal)
+{
+	$bulan = array(
 		1 =>   'Januari',
 		'Februari',
 		'Maret',
@@ -74,49 +76,51 @@ function tgl_indo($tanggal){
 		'Desember'
 	);
 	$pecahkan = explode('-', $tanggal);
-	
+
 	// variabel pecahkan 0 = tanggal
 	// variabel pecahkan 1 = bulan
 	// variabel pecahkan 2 = tahun
- 
-	return $pecahkan[2] . ' ' . $bulan[ (int)$pecahkan[1] ] . ' ' . $pecahkan[0];
+
+	return $pecahkan[2] . ' ' . $bulan[(int)$pecahkan[1]] . ' ' . $pecahkan[0];
 }
 
-function penduduk($nik){
-	if($nik != ''){
+function penduduk($nik)
+{
+	if ($nik != '') {
 		$data = mysqli_fetch_assoc(query("SELECT * FROM `penduduk` WHERE nik = '$nik' "));
 		$data = [
 			"nik" => $data['nik'],
-			"nama" => $data['nama'], 
+			"nama" => $data['nama'],
 			"alamat" => $data['alamat'],
-			"tempat-lahir" => $data['tempat_lahir'], 
-			"tanggal-lahir" =>tgl_indo($data['tanggal_lahir']),
+			"tempat-lahir" => $data['tempat_lahir'],
+			"tanggal-lahir" => tgl_indo($data['tanggal_lahir']),
 			"umur" => umur($data['tanggal_lahir']),
 			"pekerjaan" => $data['pekerjaan'],
 			"jenis-kelamin" => $data['jenis_kelamin']
 		];
-	}else{
+	} else {
 		$data = [
 			"nik" => '-',
-			"nama" => '-', 
+			"nama" => '-',
 			"alamat" => '-',
-			"tempat-lahir" => '-', 
-			"tanggal-lahir" =>'-'
+			"tempat-lahir" => '-',
+			"tanggal-lahir" => '-'
 		];
 	}
 	return $data;
 }
 
-function keluarga($kk){
+function keluarga($kk)
+{
 	$cari = query("SELECT * FROM `kartu_keluarga` WHERE no_kk = '$kk' ");
-	if(mysqli_num_rows($cari)>0){
+	if (mysqli_num_rows($cari) > 0) {
 		$data = mysqli_fetch_assoc($cari);
 		$penduduk = penduduk($data['kepala_kk']);
 		$detail = [
 			"kepala-kk" => $penduduk['nama'],
 			"nik-kk" => $penduduk['nik']
 		];
-	}else{
+	} else {
 		$data = mysqli_fetch_assoc($cari);
 		$penduduk = penduduk($data['kepala_kk']);
 		$detail = [
@@ -127,37 +131,40 @@ function keluarga($kk){
 	return $detail;
 }
 
-function umur($tgl_lahir){
-	
+function umur($tgl_lahir)
+{
+
 	// ubah ke format Ke Date Time
 	$lahir = new DateTime($tgl_lahir);
 	$hari_ini = new DateTime();
-		
+
 	$diff = $hari_ini->diff($lahir);
-		
+
 	// Display
-	
+
 	return $diff->y;
 }
 
-function user($id){
+function user($id)
+{
 	$cari = query("SELECT * FROM `user` WHERE id = '$id' ");
-	if(mysqli_num_rows($cari)>0){
+	if (mysqli_num_rows($cari) > 0) {
 		$data = mysqli_fetch_assoc($cari);
 		$result = ["nama" => $data['nama']];
 		return $result;
 	}
 }
 
-function total_anggaran($id_kegiatan){
+function total_anggaran($id_kegiatan)
+{
 	$cari = query("SELECT * FROM `nota` WHERE id_kegiatan = '$id_kegiatan' ");
-	if(mysqli_num_rows($cari)>0){
+	if (mysqli_num_rows($cari) > 0) {
 		$biaya = 0;
-		while($data = mysqli_fetch_assoc($cari)){
+		while ($data = mysqli_fetch_assoc($cari)) {
 			$biaya = $biaya + $data['biaya'];
 		}
 		return rupiah($biaya);
-	}else{
+	} else {
 		return rupiah(0);
 	}
 }
