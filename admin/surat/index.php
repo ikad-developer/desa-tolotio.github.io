@@ -21,16 +21,22 @@ $_SESSION['menu'] = 'surat';
         <div class="form-group">
           <select class="form-control" id="jenis-surat">
             <option>--Pilih Surat--</option>
+            <option value="Surat Keterangan Domisili">Surat Keterangan Domisili</option>
+            <option value="Surat Keterangan Usaha">Surat Keterangan Usaha</option>
             <option value="Surat Keterangan Penghasilan Orang Tua">Surat Keterangan Penghasilan Orang Tua</option>
+            <option value="Surat Keterangan Harga Tanah">Surat Keterangan Harga Tanah</option>
           </select>
         </div>
         <div id="komponen-surat"></div>
       </div>
-      <div class="col-lg-6"></div>
+      <div class="col-lg-7 mb-2" id="contoh-surat">
+
+      </div>
     </div>
   </div>
-  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
-  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+</div>
+<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
 </div>
 
 <script>
@@ -50,6 +56,7 @@ $_SESSION['menu'] = 'surat';
           success: function(respon) {
             $('#jenis-surat').removeAttr('disabled')
             $('#komponen-surat').html(respon);
+            $('#contoh-surat').html('<div class="embed-responsive embed-responsive-1by1"> <iframe class = "embed-responsive-item" src = "../file-surat/contoh/' + surat + '.pdf" allowfullscreen > < /iframe>');
           }
         })
       }

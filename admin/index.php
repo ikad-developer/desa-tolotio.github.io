@@ -100,7 +100,7 @@ require 'functions.php';
           load_halaman(url, menu);
         }
 
-        // $('.form-control').attr('autocomplete', 'off');
+        $('.form-control').attr('autocomplete', 'off');
 
 
         $('.menu').click(function() {

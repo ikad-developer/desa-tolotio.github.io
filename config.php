@@ -1,7 +1,7 @@
 <?php
 $koneksi = mysqli_connect("localhost", "root", "", "Tolotio");
 
-$basis_url = 'http://localhost/Tamboo/';
+$basis_url = 'http://localhost/desa-tolotio/';
 
 $pengacak = 'LATIPONGOPEE';
 
@@ -96,7 +96,9 @@ function penduduk($nik)
 			"tanggal-lahir" => tgl_indo($data['tanggal_lahir']),
 			"umur" => umur($data['tanggal_lahir']),
 			"pekerjaan" => $data['pekerjaan'],
-			"jenis-kelamin" => $data['jenis_kelamin']
+			"jenis-kelamin" => $data['jenis_kelamin'],
+			"agama" => $data['agama'],
+			"status" => $data['status']
 		];
 	} else {
 		$data = [
@@ -104,7 +106,12 @@ function penduduk($nik)
 			"nama" => '-',
 			"alamat" => '-',
 			"tempat-lahir" => '-',
-			"tanggal-lahir" => '-'
+			"tanggal-lahir" => '-',
+			"umur" => '-',
+			"pekerjaan" => '-',
+			"jenis-kelamin" => '-',
+			"agama" => '-',
+			"status" => '-'
 		];
 	}
 	return $data;
@@ -167,4 +174,12 @@ function total_anggaran($id_kegiatan)
 	} else {
 		return rupiah(0);
 	}
+}
+
+function organisasi($jabatan)
+{
+	$calback = [];
+	$cari = query("SELECT * FROM `organisasi` WHERE jabatan = '$jabatan' ");
+	$data = mysqli_fetch_assoc($cari);
+	return $data['nama'];
 }

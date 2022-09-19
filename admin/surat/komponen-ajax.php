@@ -12,7 +12,6 @@ if (isset($_POST['kategori-surat'])) {
           <input type="text" class="form-control" id="no-surat">
         </div>
       </div>
-      </div>
       <div class="form-group row">
         <label for="nama-pemohon" class="col-sm-4 col-form-label">Nama Pemohon</label>
         <div class="col-sm-8">
@@ -36,16 +35,153 @@ if (isset($_POST['kategori-surat'])) {
         </div>
       </div>
       <div class="form-group row">
-        <label for="penghasilan-ortu" class="col-sm-4 col-form-label">Alasan Penggunaan Surat Keterangan</label>
+        <label for="alasan" class="col-sm-4 col-form-label">Alasan Penggunaan Surat Keterangan</label>
         <div class="col-sm-8">
-          <textarea class="form-control" id="penghasilan-ortu" rows="3" placeholder="Persyaratan mendaftar Kuliah di Universitas Bina Taruna"></textarea>
+          <textarea class="form-control" id="alasan" rows="3" placeholder="Persyaratan mendaftar Kuliah di Universitas Bina Taruna"></textarea>
         </div>
       </div>
       <div class="form-group row">
-        <label for="penghasilan-ortu" class="col-sm-4 col-form-label">Tanggal Cetak</label>
+        <label for="tanggal" class="col-sm-4 col-form-label">Tanggal Cetak</label>
         <div class="col-sm-8">
-          <input type="date" class="form-control" id="penghasilan-ortu" value="<?= date('Y-m-d') ?>">
+          <input type="date" class="form-control" id="tanggal" value="<?= date('Y-m-d') ?>">
         </div>
+      </div>
+      <button type="button" class="btn btn-primary btn-block" id="keterangan-penghasil">Simpan & Cetak</button>
+      <div class="alert alert-primary" id="notif" role="alert" style="display:none">
+        Jika terjadi kesalahan pada surat, silahkan diedit dan dicetak ulang di tab menu Surat Keluar
+      </div>
+    <?php
+      break;
+
+    case 'Surat Keterangan Domisili':
+    ?>
+      <div class="form-group row">
+        <label for="no-surat" class="col-sm-4 col-form-label">Nomor Surat</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" id="no-surat">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="nama-pemohon" class="col-sm-4 col-form-label">Nama Pemohon</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" id="nama-pemohon">
+          <div id="hasil-pemohon">
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="tanggal" class="col-sm-4 col-form-label">Tanggal Cetak</label>
+        <div class="col-sm-8">
+          <input type="date" class="form-control" id="tanggal" value="<?= date('Y-m-d') ?>">
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary btn-block" id="keterangan-domisili">Simpan & Cetak</button>
+      <div class="alert alert-primary" id="notif" role="alert" style="display:none">
+        Jika terjadi kesalahan pada surat, silahkan diedit dan dicetak ulang di tab menu Surat Keluar
+      </div>
+    <?php
+      break;
+
+    case 'Surat Keterangan Harga Tanah':
+    ?>
+      <div class="form-group row">
+        <label for="no-surat" class="col-sm-4 col-form-label">Nomor Surat</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" id="no-surat">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="nama-pemohon" class="col-sm-4 col-form-label">Nama Pemohon</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" id="nama-pemohon">
+          <div id="hasil-pemohon">
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="lokasi" class="col-sm-4 col-form-label">Lokasi Tanah</label>
+        <div class="col-sm-8">
+          <textarea class="form-control" id="lokasi" rows="3" placeholder="Dusun I Tamendao"></textarea>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="no-sertifikat" class="col-sm-4 col-form-label">Nomor Sertifikat Tanah</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" id="no-sertifikat" placeholder="00058">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="luas-tanah" class="col-sm-4 col-form-label">Luas Tanah</label>
+        <div class="col-sm-8">
+          <div class="input-group mb-2">
+            <input type="number" class="form-control" id="luas-tanah" placeholder="234">
+            <div class="input-group-prepend">
+              <div class="input-group-text">M<sup>2</sup></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="harga" class="col-sm-4 col-form-label">Harga Tanah</label>
+        <div class="col-sm-8">
+          <div class="input-group mb-2">
+            <input type="text" class="form-control" id="harga" placeholder="234" value="Rp. ">
+            <div class="input-group-prepend">
+              <div class="input-group-text">/M<sup>2</sup></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="tanggal" class="col-sm-4 col-form-label">Tanggal Cetak</label>
+        <div class="col-sm-8">
+          <input type="date" class="form-control" id="tanggal" value="<?= date('Y-m-d') ?>">
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary btn-block" id="harga-tanah">Simpan & Cetak</button>
+      <div class="alert alert-primary" id="notif" role="alert" style="display:none">
+        Jika terjadi kesalahan pada surat, silahkan diedit dan dicetak ulang di tab menu Surat Keluar
+      </div>
+    <?php
+      break;
+
+    case 'Surat Keterangan Usaha':
+    ?>
+      <div class="form-group row">
+        <label for="no-surat" class="col-sm-4 col-form-label">Nomor Surat</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" id="no-surat">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="nama-pemohon" class="col-sm-4 col-form-label">Nama Pemohon</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" id="nama-pemohon">
+          <div id="hasil-pemohon">
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="nama-usaha" class="col-sm-4 col-form-label">Nama Usaha</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" id="nama-usaha" placeholder="NELAYAN IKAN PINGGIR">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="lokasi" class="col-sm-4 col-form-label">Lokasi Usaha</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" id="lokasi" placeholder="Dusun IV Tolite">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="tanggal" class="col-sm-4 col-form-label">Tanggal Cetak</label>
+        <div class="col-sm-8">
+          <input type="date" class="form-control" id="tanggal" value="<?= date('Y-m-d') ?>">
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary btn-block" id="keterangan-usaha">Simpan & Cetak</button>
+      <div class="alert alert-primary" id="notif" role="alert" style="display:none">
+        Jika terjadi kesalahan pada surat, silahkan diedit dan dicetak ulang di tab menu Surat Keluar
       </div>
   <?php
       break;
@@ -81,6 +217,8 @@ if (isset($_POST['cari-identitas'])) {
 
 <script>
   $(document).ready(function() {
+
+    $('.form-control').attr('autocomplete', 'off');
 
     $('.pilih-nama').click(function() {
       var nama = $(this).text();
@@ -135,8 +273,135 @@ if (isset($_POST['cari-identitas'])) {
       var hasilCari = $(this).attr('data-nama');
       var sumber = $(this).attr('data-sumber');
       var hasil = $(this).attr('data-hasil');
+      var nik = $(this).val();
+      $(sumber).attr('data-nik', nik);
       $(sumber).val(hasilCari);
       $(hasil).hide();
+    })
+
+    $('#keterangan-penghasil').click(function() {
+      var no = $('#no-surat').val();
+      var pemohon = $('#nama-pemohon').attr('data-nik');
+      var ortu = $('#nama-ortu').attr('data-nik');
+      var penghasilan = $('#penghasilan-ortu').val();
+      var alasan = $('#alasan').val();
+      var tanggal = $('#tanggal').val();
+
+      $.ajax({
+        beforeSend: function() {
+          $('#keterangan-penghasil').attr('disabled', 'disabled')
+        },
+        type: 'post',
+        url: 'surat/proses.php',
+        data: 'surat-keterangan-penghasilan=true&no=' + no + '&pemohon=' + pemohon + '&orang-tua=' + ortu + '&penghasilan=' + penghasilan + '&alasan=' + alasan + '&tanggal=' + tanggal,
+        success: function(respon) {
+          var pecah = respon.split('|');
+          Swal.fire({
+            position: 'center',
+            icon: pecah[0],
+            title: pecah[1],
+            showConfirmButton: false,
+            timer: 1500
+          })
+          if (pecah[0] == 'success') {
+            window.open(pecah[2], '_blank');
+          }
+          $('#notif').show();
+        }
+      })
+    })
+
+    $('#keterangan-domisili').click(function() {
+      var no = $('#no-surat').val();
+      var pemohon = $('#nama-pemohon').attr('data-nik');
+      var tanggal = $('#tanggal').val();
+
+      $.ajax({
+        beforeSend: function() {
+          $('#keterangan-domisili').attr('disabled', 'disabled')
+        },
+        type: 'post',
+        url: 'surat/proses.php',
+        data: 'surat-keterangan-domisili=true&no=' + no + '&pemohon=' + pemohon + '&tanggal=' + tanggal,
+        success: function(respon) {
+          var pecah = respon.split('|');
+          Swal.fire({
+            position: 'center',
+            icon: pecah[0],
+            title: pecah[1],
+            showConfirmButton: false,
+            timer: 1500
+          })
+          if (pecah[0] == 'success') {
+            window.open(pecah[2], '_blank');
+          }
+          $('#notif').show();
+        }
+      })
+    })
+
+    $('#harga-tanah').click(function() {
+      var no_surat = $('#no-surat').val();
+      var pemohon = $('#nama-pemohon').attr('data-nik');
+      var tanggal = $('#tanggal').val();
+      var lokasi = $('#lokasi').val();
+      var no_sertifikat = $('#no-sertifikat').val();
+      var luas_tanah = $('#luas-tanah').val();
+      var harga = $('#harga').val();
+
+      $.ajax({
+        beforeSend: function() {
+          $('#harga-tanah').attr('disabled', 'disabled')
+        },
+        type: 'post',
+        url: 'surat/proses.php',
+        data: 'surat-keterangan-harga-tanah=true&no=' + no_surat + '&pemohon=' + pemohon + '&lokasi=' + lokasi + '&no-sertifikat=' + no_sertifikat + '&luas-tanah=' + luas_tanah + '&tanggal=' + tanggal + '&harga=' + harga,
+        success: function(respon) {
+          var pecah = respon.split('|');
+          Swal.fire({
+            position: 'center',
+            icon: pecah[0],
+            title: pecah[1],
+            showConfirmButton: false,
+            timer: 1500
+          })
+          if (pecah[0] == 'success') {
+            window.open(pecah[2], '_blank');
+          }
+          $('#notif').show();
+        }
+      })
+    })
+
+    $('#keterangan-usaha').click(function() {
+      var no_surat = $('#no-surat').val();
+      var pemohon = $('#nama-pemohon').attr('data-nik');
+      var tanggal = $('#tanggal').val();
+      var lokasi = $('#lokasi').val();
+      var nama_usaha = $('#nama-usaha').val();
+
+      $.ajax({
+        beforeSend: function() {
+          $('#keterangan-usaha').attr('disabled', 'disabled')
+        },
+        type: 'post',
+        url: 'surat/proses.php',
+        data: 'surat-keterangan-usaha=true&no=' + no_surat + '&pemohon=' + pemohon + '&lokasi=' + lokasi + '&nama-usaha=' + nama_usaha + '&tanggal=' + tanggal,
+        success: function(respon) {
+          var pecah = respon.split('|');
+          Swal.fire({
+            position: 'center',
+            icon: pecah[0],
+            title: pecah[1],
+            showConfirmButton: false,
+            timer: 1500
+          })
+          if (pecah[0] == 'success') {
+            window.open(pecah[2], '_blank');
+          }
+          $('#notif').show();
+        }
+      })
     })
 
   })
