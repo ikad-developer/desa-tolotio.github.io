@@ -7,7 +7,7 @@ if (isset($_POST['cetak'])) {
   $no_surat = $_POST['no-surat'];
   $tanggal = time();
   $ket = ucwords(strtolower(str_replace('-', ' ', $keterangan)));
-  query("INSERT INTO `surat_keluar`(`no_surat`, `keterangan`, `penerima`, `pembuat`, `tanggal`) VALUES ('$no_surat','$ket','$nik','$id','$tanggal')");
+  query("INSERT INTO `surat_keluar`(`no_surat`, `keterangan`, `penerima`, `pembuat`, `tanggal`) VALUES ('$no_surat','$ket','$nik','$nik','$tanggal')");
   echo $basis_url . 'cetak/' . $keterangan . '/' . $nik;
 }
 
@@ -19,7 +19,7 @@ if (isset($_POST['surat-keterangan-penghasilan'])) {
   $alasan = $_POST['alasan'];
   $id_surat = time();
   $tanggal = $_POST['tanggal'];
-  $cek = query("INSERT INTO `surat_keluar`(`id`, `no_surat`, `keterangan`, `pembuat`, `tanggal`, `alasan`,`penghasilan`, `pemohon`, `tipe_surat`) VALUES ('$id_surat','$no','$ortu','$id','$tanggal','$alasan','$penghasilan','$pemohon','SURAT KETERANGAN PENGHASILAN ORANG TUA')");
+  $cek = query("INSERT INTO `surat_keluar`(`id`, `no_surat`, `keterangan`, `pembuat`, `tanggal`, `alasan`,`penghasilan`, `pemohon`, `tipe_surat`) VALUES ('$id_surat','$no','$ortu','$nik','$tanggal','$alasan','$penghasilan','$pemohon','SURAT KETERANGAN PENGHASILAN ORANG TUA')");
   if ($cek) {
     $keterangan = 'surat-keterangan-penghasilan-orang-tua';
     $url = $basis_url . 'cetak/' . $keterangan . '/' . $id_surat;
@@ -34,7 +34,7 @@ if (isset($_POST['surat-keterangan-domisili'])) {
   $pemohon = $_POST['pemohon'];
   $id_surat = time();
   $tanggal = $_POST['tanggal'];
-  $cek = query("INSERT INTO `surat_keluar`(`id`, `no_surat`, `pembuat`, `tanggal`, `pemohon`, `tipe_surat`) VALUES ('$id_surat','$no','$id','$tanggal','$pemohon','SURAT KETERANGAN DOMISILI')");
+  $cek = query("INSERT INTO `surat_keluar`(`id`, `no_surat`, `pembuat`, `tanggal`, `pemohon`, `tipe_surat`) VALUES ('$id_surat','$no','$nik','$tanggal','$pemohon','SURAT KETERANGAN DOMISILI')");
   if ($cek) {
     $keterangan = 'surat-keterangan-domisili';
     $url = $basis_url . 'cetak/' . $keterangan . '/' . $id_surat;
@@ -53,7 +53,7 @@ if ($_POST['surat-keterangan-harga-tanah']) {
   $tanggal = $_POST['tanggal'];
   $harga = $_POST['harga'];
   $id_surat = time();
-  $cek = query("INSERT INTO `surat_keluar`(`id`, `no_surat`, `keterangan`, `pembuat`, `tanggal`, `alasan`, `penghasilan`, `pemohon`, `status`, `tipe_surat`) VALUES ('$id_surat','$no','$lokasi','$id','$tanggal','$no_sertifikat','$harga','$pemohon','$luas_tanah','SURAT KETERANGAN HARGA TANAH')");
+  $cek = query("INSERT INTO `surat_keluar`(`id`, `no_surat`, `keterangan`, `pembuat`, `tanggal`, `alasan`, `penghasilan`, `pemohon`, `status`, `tipe_surat`) VALUES ('$id_surat','$no','$lokasi','$nik','$tanggal','$no_sertifikat','$harga','$pemohon','$luas_tanah','SURAT KETERANGAN HARGA TANAH')");
   if ($cek) {
     $url = $basis_url . 'cetak/surat-keterangan-harga-tanah/' . $id_surat;
     echo 'success|Data Berhasil disimpan|' . $url;
@@ -69,8 +69,48 @@ if (isset($_POST['surat-keterangan-usaha'])) {
   $nama_usaha = $_POST['nama-usaha'];
   $tanggal = $_POST['tanggal'];
   $id_surat = time();
-  $cek = query("INSERT INTO `surat_keluar`(`id`, `no_surat`, `keterangan`, `pembuat`, `tanggal`, `alasan`, `pemohon`, `tipe_surat`) VALUES ('$id_surat','$no','$lokasi','$id','$tanggal','$nama_usaha','$pemohon','SURAT KETERANGAN USAHA')");
+  $cek = query("INSERT INTO `surat_keluar`(`id`, `no_surat`, `keterangan`, `pembuat`, `tanggal`, `alasan`, `pemohon`, `tipe_surat`) VALUES ('$id_surat','$no','$lokasi','$nik','$tanggal','$nama_usaha','$pemohon','SURAT KETERANGAN USAHA')");
 
   $url = $basis_url . 'cetak/surat-keterangan-usaha/' . $id_surat;
   echo 'success|Data Berhasil disimpan|' . $url;
+}
+
+if (isset($_POST['keterangan-surat'])) {
+  $keterangan = $_POST['keterangan-surat'];
+  $no_surat = $_POST['no-surat'];
+  $tanggal = $_POST['tanggal'];
+  $id_surat = time();
+  $pemohon = $_POST['nama-pemohon'];
+  switch ($keterangan) {
+    case 'keterangan-tidak-mampu':
+      $cek = query("INSERT INTO `surat_keluar`(`id`, `no_surat`, `pembuat`, `tanggal`, `pemohon`, `tipe_surat`) VALUES ('$id_surat','$no_surat','$nik','$tanggal','$pemohon','SURAT KETERANGAN TIDAK MAMPU')");
+
+      $url = $basis_url . 'cetak/surat-keterangan-tidak-mampu/' . $id_surat;
+      echo 'success|Data Berhasil Disimpan|' . $url;
+
+      break;
+    case 'surat-kuasa':
+      $keterangan = $_POST['keterangan'];
+      $penerima = $_POST['penerima'];
+      query("INSERT INTO `surat_keluar`(`id`, `penerima`, `pembuat`, `tanggal`, `alasan`, `pemohon`, `tipe_surat`) VALUES ('$id_surat','$penerima','$nik','$tanggal','$keterangan','$pemohon','SURAT KUASA')");
+      $url = $basis_url . 'cetak/surat-kuasa/' . $id_surat;
+      echo 'success|Data Berhasil Disimpan|' . $url;
+      break;
+
+    case 'surat-keterangan-profil-kerja':
+      $cek = query("INSERT INTO `surat_keluar`(`id`, `no_surat`, `pembuat`, `tanggal`, `pemohon`, `tipe_surat`) VALUES ('$id_surat','$no_surat','$nik','$tanggal','$pemohon','SURAT KETERANGAN PROFIL KERJA')");
+
+      $url = $basis_url . 'cetak/surat-keterangan-profil-kerja/' . $id_surat;
+      echo 'success|Data Berhasil Disimpan|' . $url;
+      break;
+
+    case 'surat-keterangan-kelakuan-baik':
+      $cek = query("INSERT INTO `surat_keluar`(`id`, `no_surat`, `pembuat`, `tanggal`, `pemohon`, `tipe_surat`) VALUES ('$id_surat','$no_surat','$nik','$tanggal','$pemohon','SURAT KETERANGAN KELAKUAN BAIK')");
+
+      $url = $basis_url . 'cetak/surat-keterangan-kelakuan-baik/' . $id_surat;
+      echo 'success|Data Berhasil Disimpan|' . $url;
+      break;
+    default:
+  }
+  exit;
 }

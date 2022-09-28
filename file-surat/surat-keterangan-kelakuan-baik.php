@@ -1,21 +1,35 @@
 <?php
-function keterangan_usaha($no_surat, $kades, $pemohon, $tgl_cetak, $usaha, $lokasi_usaha)
+function keterangan_profil_kerja($no_surat, $pemohon,  $kades,  $tgl_cetak)
 {
 ?>
+<style>
+ol {
+  font-weight: bold;
+}
+
+ol li {
+  height: 25px;
+}
+</style>
 <section class="sheet padding-20mm">
   <?php require 'cop-surat.php'; ?>
-  <p class="text-center"><u><b>SURAT KETERANGAN</b></u></p>
-  <p class="text-center">Nomor : <?= $no_surat; ?></p>
-  <p style="margin-top:40px">Yang bertanda tangan dibawah ini Kepala Desa Tolotio Kecamatan Bonepantai Kabupaten Bone
-    Bolango menerangkan kepada :</p>
+  <p class="text-center"><u><b>SURAT KETERANGAN KELAKUAN BAIK</b></u></p>
+  <p class="text-center" style="margin-top:10px; margin-bottom:10px">Nomor : <?= $no_surat; ?></p>
+  <p style="margin-top:15px; text-indent:40px">Yang bertanda tangan dibawah ini Kepala Desa Tolotio Kecamatan Bonepantai
+    Kabupaten Bone Bolango menerangkan bahwa :</p>
   <table style="margin-left:45px">
     <tr height="25px">
       <td>Nama</td>
       <td width="10px" class="text-center">:</td>
-      <td><?= penduduk($pemohon)['nama']; ?></td>
+      <td><b><?= penduduk($pemohon)['nama']; ?></b></td>
     </tr>
     <tr height="25px">
-      <td>T T L</td>
+      <td>NIK</td>
+      <td width="10px" class="text-center">:</td>
+      <td><?= $pemohon; ?></td>
+    </tr>
+    <tr height="25px">
+      <td>Tempat/Tanggal Lahir</td>
       <td width="10px" class="text-center">:</td>
       <td><?= penduduk($pemohon)['tempat-lahir'] . ', ' . penduduk($pemohon)['tanggal-lahir']; ?></td>
     </tr>
@@ -25,14 +39,14 @@ function keterangan_usaha($no_surat, $kades, $pemohon, $tgl_cetak, $usaha, $loka
       <td><?= penduduk($pemohon)['jenis-kelamin']; ?></td>
     </tr>
     <tr height="25px">
-      <td>Status</td>
-      <td width="10px" class="text-center">:</td>
-      <td><?= penduduk($pemohon)['status']; ?></td>
-    </tr>
-    <tr height="25px">
       <td>Pekerjaan</td>
       <td width="10px" class="text-center">:</td>
       <td><?= penduduk($pemohon)['pekerjaan']; ?></td>
+    </tr>
+    <tr height="25px">
+      <td>Agama</td>
+      <td width="10px" class="text-center">:</td>
+      <td><?= penduduk($pemohon)['agama']; ?></td>
     </tr>
     <tr height="25px">
       <td>Alamat</td>
@@ -40,20 +54,22 @@ function keterangan_usaha($no_surat, $kades, $pemohon, $tgl_cetak, $usaha, $loka
       <td><?= penduduk($pemohon)['alamat']; ?></td>
     </tr>
   </table>
-  <p style="text-align:justify; text-indent:40px; line-height:28px">Bahwa yang bersangkutan benar-benar memiliki Usaha
-    <b> “ <?= $usaha ?> “ </b> yang berada di Desa Tolotio <?= $lokasi_usaha ?>, Kecamatan Bonepantai Kabupaten Bone
-    Bolango.
-  </p>
-  <p style="text-align:justify; text-indent:40px; line-height:28px">Demikian surat keterangan ini diberikan kepada yang
-    bersangkutan untuk digunakan seperlunya</p>
+  <p style="text-align:justify; margin-top:10px; margin-bottom:10px">Yang bersangkutan tersebut diatas
+    dinyatakan benar-benar : </p>
+  <ol>
+    <li>Berkelakuan Baik;</li>
+    <li>Tidak pernah terlibat pada suatu gerakan yang dilarang di NKRI, seperti G/30.S/ PKI dan sejenisnya.</li>
+  </ol>
+  <p style="text-align:justify; margin-top:20px; margin-bottom:10px">Demikian Surat Keterangan ini di berikan kepada
+    yang bersangkutan untuk digunakan seperlunya.</p>
   <table style="margin-left:285px; margin-top:50px">
     <tr>
-      <td width="150px">DIKELUARKAN DI</td>
+      <td width="120px">Dikeluarkan</td>
       <td width="25px" class="text-center">:</td>
-      <td>DESA TOLOTIO</td>
+      <td>Di Desa Tolotio</td>
     </tr>
     <tr style="border-bottom: 1px solid ;">
-      <td>PADA TANGGAL</td>
+      <td>Pada Tanggal</td>
       <td class="text-center">:</td>
       <td><?= tgl_indo($tgl_cetak); ?></td>
     </tr>

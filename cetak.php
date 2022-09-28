@@ -8,27 +8,30 @@ $id = $_GET['nik']
 <head>
   <title>Cetak Surat</title>
   <link rel="stylesheet" href="<?= $basis_url; ?>css/paper.css">
+  <style>
+  * {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12pt;
+  }
+  </style>
 </head>
 
 <body class="A4">
   <?php
   switch ($kategori) {
-    case 'surat-keterangan-kurang-mampu':
-      require 'file-surat/keterangan-kurang-mampu.php';
-      $tipe_surat = ucwords(strtolower(str_replace('-', ' ', $kategori)));
-      $data = mysqli_fetch_assoc(query("SELECT * FROM `surat_keluar` WHERE keterangan = '$tipe_surat' AND penerima = '$nik' ORDER BY id DESC "));
-      $no_surat = $data['no_surat'];
-      $penduduk = penduduk($nik);
-      $nama = ucwords(strtolower($penduduk['nama']));
-      $jk = $penduduk['jenis-kelamin'];
-      $ttl = $penduduk['tempat-lahir'] . ', ' . $penduduk['tanggal-lahir'];
-      $umur = $penduduk['umur'] . ' Tahun';
-      $pekerjaan = $penduduk['pekerjaan'];
-      $alamat = $penduduk['alamat'];
-      $tgl_cetak = tgl_indo(date('Y-m-d', $data['tanggal']));
-      $org = mysqli_fetch_assoc(query("SELECT * FROM `user` WHERE `status` = 'kades' "));
-      $kades = $org['nama'];
-      keterangan_miskin($no_surat, $kades, $nama, $jk, $ttl, $umur, $pekerjaan, $alamat, $tgl_cetak);
+    case 'surat-keterangan-tidak-mampu':
+      require 'file-surat/surat-keterangan-tidak-mampu.php';
+      $cek = query("SELECT * FROM `surat_keluar` WHERE id = '$id' ");
+      if (mysqli_num_rows($cek) > 0) {
+        $data = mysqli_fetch_assoc($cek);
+        $no_surat = $data['no_surat'];
+        $kades = organisasi('kades');
+        $tgl_cetak = $data['tanggal'];
+        $pemohon = $data['pemohon'];;
+        keterangan_tidak_mampu($no_surat, $kades, $pemohon, $tgl_cetak);
+      } else {
+        echo '<h2>Data surat tidak ditemukan</h2>';
+      }
       break;
 
     case 'surat-keterangan-penghasilan-orang-tua':
@@ -82,6 +85,71 @@ $id = $_GET['nik']
         echo 'Data surat tidak ditemukan';
       }
       break;
+
+    case 'surat-kuasa':
+      require 'file-surat/surat-kuasa.php';
+      $cek = query("SELECT * FROM `surat_keluar` WHERE id = '$id' ");
+      if (mysqli_num_rows($cek) > 0) {
+        $data = mysqli_fetch_assoc($cek);
+        $no_surat = $data['no_surat'];
+        $kades = organisasi('kades');
+        $pemohon = $data['pemohon'];
+        $pemohon2 = $data['penerima'];
+        $tgl_cetak = $data['tanggal'];
+        $alasan = $data['alasan'];
+        surat_kuasa($pemohon, $pemohon2, $kades, $tgl_cetak, $alasan);
+      } else {
+        echo '<h2>Data surat tidak ditemukan</h2>';
+      }
+      break;
+
+    case 'surat-keterangan-usaha':
+      require 'file-surat/surat-keterangan-usaha.php';
+      $cek = query("SELECT * FROM `surat_keluar` WHERE id = '$id' ");
+      if (mysqli_num_rows($cek) > 0) {
+        $data = mysqli_fetch_assoc($cek);
+        $no_surat = $data['no_surat'];
+        $kades = organisasi('kades');
+        $pemohon = $data['pemohon'];
+        $tgl_cetak = $data['tanggal'];
+        $usaha = $data['alasan'];
+        $lokasi_usaha = $data['keterangan'];
+        keterangan_usaha($no_surat, $kades, $pemohon, $tgl_cetak, $usaha, $lokasi_usaha);
+      } else {
+        echo '<h2>Data surat tidak ditemukan</h2>';
+      }
+      break;
+
+    case 'surat-keterangan-profil-kerja':
+      require 'file-surat/surat-keterangan-profil-kerja.php';
+      $cek = query("SELECT * FROM `surat_keluar` WHERE id = '$id' ");
+      if (mysqli_num_rows($cek) > 0) {
+        $data = mysqli_fetch_assoc($cek);
+        $no_surat = $data['no_surat'];
+        $kades = organisasi('kades');
+        $pemohon = $data['pemohon'];
+        $tgl_cetak = $data['tanggal'];
+        keterangan_profil_kerja($no_surat, $pemohon, $kades, $tgl_cetak);
+      } else {
+        echo '<h2>Data surat tidak ditemukan</h2>';
+      }
+      break;
+
+    case 'surat-keterangan-kelakuan-baik':
+      require 'file-surat/surat-keterangan-kelakuan-baik.php';
+      $cek = query("SELECT * FROM `surat_keluar` WHERE id = '$id' ");
+      if (mysqli_num_rows($cek) > 0) {
+        $data = mysqli_fetch_assoc($cek);
+        $no_surat = $data['no_surat'];
+        $kades = organisasi('kades');
+        $pemohon = $data['pemohon'];
+        $tgl_cetak = $data['tanggal'];
+        keterangan_profil_kerja($no_surat, $pemohon, $kades, $tgl_cetak);
+      } else {
+        echo '<h2>Data surat tidak ditemukan</h2>';
+      }
+      break;
+
     default:
       echo 'Data surat tidak ditemukan';
   }

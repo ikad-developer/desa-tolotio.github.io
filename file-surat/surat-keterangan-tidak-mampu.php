@@ -1,10 +1,10 @@
 <?php
-function keterangan_usaha($no_surat, $kades, $pemohon, $tgl_cetak, $usaha, $lokasi_usaha)
+function keterangan_tidak_mampu($no_surat, $kades, $pemohon, $tgl_cetak)
 {
 ?>
 <section class="sheet padding-20mm">
   <?php require 'cop-surat.php'; ?>
-  <p class="text-center"><u><b>SURAT KETERANGAN</b></u></p>
+  <p class="text-center"><u><b>SURAT KETERANGAN TIDAK MAMPU (SKTM)</b></u></p>
   <p class="text-center">Nomor : <?= $no_surat; ?></p>
   <p style="margin-top:40px">Yang bertanda tangan dibawah ini Kepala Desa Tolotio Kecamatan Bonepantai Kabupaten Bone
     Bolango menerangkan kepada :</p>
@@ -25,9 +25,9 @@ function keterangan_usaha($no_surat, $kades, $pemohon, $tgl_cetak, $usaha, $loka
       <td><?= penduduk($pemohon)['jenis-kelamin']; ?></td>
     </tr>
     <tr height="25px">
-      <td>Status</td>
+      <td>Agama</td>
       <td width="10px" class="text-center">:</td>
-      <td><?= penduduk($pemohon)['status']; ?></td>
+      <td><?= penduduk($pemohon)['agama']; ?></td>
     </tr>
     <tr height="25px">
       <td>Pekerjaan</td>
@@ -40,15 +40,11 @@ function keterangan_usaha($no_surat, $kades, $pemohon, $tgl_cetak, $usaha, $loka
       <td><?= penduduk($pemohon)['alamat']; ?></td>
     </tr>
   </table>
-  <p style="text-align:justify; text-indent:40px; line-height:28px">Bahwa yang bersangkutan benar-benar memiliki Usaha
-    <b> “ <?= $usaha ?> “ </b> yang berada di Desa Tolotio <?= $lokasi_usaha ?>, Kecamatan Bonepantai Kabupaten Bone
-    Bolango.
-  </p>
-  <p style="text-align:justify; text-indent:40px; line-height:28px">Demikian surat keterangan ini diberikan kepada yang
-    bersangkutan untuk digunakan seperlunya</p>
+  <p style="text-align:justify; text-indent:40px; line-height:28px">Bahwa yang bersangkutan adalah Penduduk Desa Tolotio
+    Kecamatan Bonepantai Kabupaten Bone Bolango dan sesuai Pendataan benar-benar dari Keluarga yang Kurang Mampu.</p>
   <table style="margin-left:285px; margin-top:50px">
     <tr>
-      <td width="150px">DIKELUARKAN DI</td>
+      <td width="140px">DIKELUARKAN DI</td>
       <td width="25px" class="text-center">:</td>
       <td>DESA TOLOTIO</td>
     </tr>
