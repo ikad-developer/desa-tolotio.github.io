@@ -110,7 +110,23 @@ if (isset($_POST['keterangan-surat'])) {
       $url = $basis_url . 'cetak/surat-keterangan-kelakuan-baik/' . $id_surat;
       echo 'success|Data Berhasil Disimpan|' . $url;
       break;
-    default:
+
+    case 'surat-keterangan-jual-beli-tanah':
+      $lokasi_tanah = $_POST['keterangan'];
+      $pembeli = $_POST['penerima'];
+      $catatan = $_POST['catatan-jual'];
+      query("INSERT INTO `surat_keluar`(`id`, `no_surat`, `keterangan`, `penerima`, `pembuat`, `tanggal`, `alasan`, `pemohon`, `tipe_surat`) VALUES ('$id_surat','$no_surat','$lokasi_tanah','$pembeli','$nik','$tanggal','$catatan','$pemohon','SURAT KETERANGAN JUAL BELI TANAH')");
+      $url = $basis_url . 'cetak/surat-keterangan-jual-beli-tanah/' . $id_surat;
+      echo 'success|Data Berhasil Disimpan|' . $url;
+      break;
+    case 'surat-rekomendasi':
+      $keterangan = $_POST['keterangan'];
+      $catatan = $_POST['catatan'];
+      $cek = query("INSERT INTO `surat_keluar`(`id`, `no_surat`, `keterangan`, `pembuat`, `tanggal`, `alasan`, `pemohon`, `tipe_surat`) VALUES ('$id_surat','$no_surat','$keterangan','$nik','$tanggal','$catatan','$pemohon','SURAT REKOMENDASI')");
+      $url = $basis_url . 'cetak/surat-rekomendasi/' . $id_surat;
+      echo 'success|Data Berhasil Disimpan|' . $url;
+      exit;
+      break;
   }
   exit;
 }

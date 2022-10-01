@@ -348,10 +348,10 @@ if (isset($_POST['kategori-surat'])) {
   </div>
 </div>
 <div class="form-group row">
-  <label for="tanggal" class="col-sm-4 col-form-label">Luas Tanah</label>
+  <label for="luas-tanah" class="col-sm-4 col-form-label">Luas Tanah</label>
   <div class="col-sm-8">
     <div class="input-group mb-2">
-      <input type="number" class="form-control" id="inlineFormInputGroup" placeholder="234">
+      <input type="number" class="form-control" id="luas-tanah" placeholder="234">
       <div class="input-group-prepend">
         <div class="input-group-text">M<sup>2</sup></div>
       </div>
@@ -359,48 +359,49 @@ if (isset($_POST['kategori-surat'])) {
   </div>
 </div>
 <div class="form-group row">
-  <label for="tanggal" class="col-sm-4 col-form-label">Harga</label>
+  <label for="harga" class="col-sm-4 col-form-label">Harga</label>
   <div class="col-sm-8">
-    <textarea class="form-control" id="alasan" rows="3"
+    <textarea class="form-control" id="harga" rows="3"
       placeholder="Rp.1.500.000 ( Satu Juta Lima Ratus Ribu Rupiah )"></textarea>
   </div>
 </div>
 <div class="form-group row">
-  <label for="tanggal" class="col-sm-4 col-form-label">Batas Sebelah Utara</label>
+  <label for="batas-utara" class="col-sm-4 col-form-label">Batas Sebelah Utara</label>
   <div class="col-sm-8">
-    <textarea class="form-control" id="alasan" rows="2" placeholder="Berbatasan dengan Gunung"></textarea>
+    <textarea class="form-control" id="batas-utara" rows="2" placeholder="Berbatasan dengan Gunung"></textarea>
   </div>
 </div>
 <div class="form-group row">
-  <label for="tanggal" class="col-sm-4 col-form-label">Batas Sebelah Selatan</label>
+  <label for="batas-selatan" class="col-sm-4 col-form-label">Batas Sebelah Selatan</label>
   <div class="col-sm-8">
-    <textarea class="form-control" id="alasan" rows="2" placeholder="Berbatasan dengan Jalan Trans"></textarea>
+    <textarea class="form-control" id="batas-selatan" rows="2" placeholder="Berbatasan dengan Jalan Trans"></textarea>
   </div>
 </div>
 <div class="form-group row">
-  <label for="tanggal" class="col-sm-4 col-form-label">Batas Sebelah Timur</label>
+  <label for="batas-timur" class="col-sm-4 col-form-label">Batas Sebelah Timur</label>
   <div class="col-sm-8">
-    <textarea class="form-control" id="alasan" rows="2"
+    <textarea class="form-control" id="batas-timur" rows="2"
       placeholder="Berbatasan dengan Pekarangan Karnain Mohi"></textarea>
   </div>
 </div>
 <div class="form-group row">
-  <label for="tanggal" class="col-sm-4 col-form-label">Batas Sebelah Barat</label>
+  <label for="batas-barat" class="col-sm-4 col-form-label">Batas Sebelah Barat</label>
   <div class="col-sm-8">
-    <textarea class="form-control" id="alasan" rows="2" placeholder="Berbatasan dengan tanahnya Hasan Gusi"></textarea>
+    <textarea class="form-control" id="batas-barat" rows="2"
+      placeholder="Berbatasan dengan tanahnya Hasan Gusi"></textarea>
   </div>
 </div>
 <div class="form-group row">
-  <label for="tanggal" class="col-sm-4 col-form-label">Saksi 1</label>
+  <label for="saksi1" class="col-sm-4 col-form-label">Saksi 1</label>
   <div class="col-sm-8">
-    <textarea class="form-control" id="alasan" rows="2" placeholder="ISMATY A MOHI ( Kadus Tolite )"></textarea>
+    <textarea class="form-control" id="saksi1" rows="2" placeholder="ISMATY A MOHI ( Kadus Tolite )"></textarea>
   </div>
 </div>
 <div class="form-group row">
-  <label for="tanggal" class="col-sm-4 col-form-label">Saksi 2</label>
+  <label for="saksi2" class="col-sm-4 col-form-label">Saksi 2</label>
   <div class="col-sm-8">
-    <textarea class="form-control" id="alasan" rows="2"
-      placeholder="2.	DESRA A BOTUTIHE ( Plt.Kasie Pemerintahan )"></textarea>
+    <textarea class="form-control" id="saksi2" rows="2"
+      placeholder="DESRA A BOTUTIHE ( Plt.Kasie Pemerintahan )"></textarea>
   </div>
 </div>
 <div class="form-group row">
@@ -410,6 +411,49 @@ if (isset($_POST['kategori-surat'])) {
   </div>
 </div>
 <button type="button" class="btn btn-primary mb-2 btn-block simpan-cetak" id="surat-keterangan-jual-beli-tanah">Simpan &
+  Cetak</button>
+<div class="alert alert-primary mt-2" id="notif" role="alert" style="display:none">
+  Jika terjadi kesalahan pada surat, silahkan diedit dan dicetak ulang di tab menu Surat Keluar
+</div>
+<?php
+      break;
+
+    case 'Surat Rekomendasi':
+    ?>
+<div class="form-group row">
+  <label for="no-surat" class="col-sm-4 col-form-label">Nomor Surat</label>
+  <div class="col-sm-8">
+    <input type="text" class="form-control" id="no-surat">
+  </div>
+</div>
+<div class="form-group row">
+  <label for="nama-pemohon" class="col-sm-4 col-form-label">Nama Pemohon</label>
+  <div class="col-sm-8">
+    <input type="text" class="form-control" id="nama-pemohon">
+    <div id="hasil-pemohon">
+    </div>
+  </div>
+</div>
+<div class="form-group row">
+  <label for="catatan" class="col-sm-4 col-form-label">Keterangan Rekomendasi</label>
+  <div class="col-sm-8">
+    <textarea class="form-control" id="catatan" rows="7"
+      placeholder="Untuk dapat di layani dalam hal pembelian BBM Di pertamina untuk kebutuhan pengoperasian mesin perahu nelayan dengan kapasitas kebutuhan 35 liter untuk jarak operasi 30 Mil">Untuk dapat di layani dalam hal pembelian BBM Di pertamina untuk kebutuhan pengoperasian mesin perahu nelayan dengan kapasitas kebutuhan 35 liter untuk jarak operasi 30 Mil (CONTOH...)</textarea>
+  </div>
+</div>
+<div class="form-group row">
+  <label for="alasan" class="col-sm-4 col-form-label">Keperluan Rekomendasi</label>
+  <div class="col-sm-8">
+    <textarea class="form-control" id="alasan" rows="2" placeholder="Kebutuhan Nelayan">Kebutuhan Nelayan</textarea>
+  </div>
+</div>
+<div class="form-group row">
+  <label for="tanggal" class="col-sm-4 col-form-label">Tanggal Cetak</label>
+  <div class="col-sm-8">
+    <input type="date" class="form-control" id="tanggal" value="<?= date('Y-m-d') ?>">
+  </div>
+</div>
+<button type="button" class="btn btn-primary mb-2 btn-block simpan-cetak" id="surat-rekomendasi">Simpan &
   Cetak</button>
 <div class="alert alert-primary mt-2" id="notif" role="alert" style="display:none">
   Jika terjadi kesalahan pada surat, silahkan diedit dan dicetak ulang di tab menu Surat Keluar
@@ -642,6 +686,9 @@ $(document).ready(function() {
 
   $('.simpan-cetak').click(function() {
     var keteranganSurat = $(this).attr('id');
+    var alasan = $('#luas-tanah').val() + '||' + $('#harga').val() + '||' + $('#batas-utara').val() + '||' + $(
+      '#batas-selatan').val() + '||' + $('#batas-timur').val() + '||' + $('#batas-barat').val() + '||' + $(
+      '#saksi1').val() + '||' + $('#saksi2').val();
     var data = new FormData();
     data.append('keterangan-surat', keteranganSurat);
     data.append('no-surat', $('#no-surat').val());
@@ -649,6 +696,8 @@ $(document).ready(function() {
     data.append('tanggal', $('#tanggal').val());
     data.append('keterangan', $('#alasan').val());
     data.append('penerima', $('#nama-ortu').attr('data-nik'));
+    data.append('catatan-jual', alasan);
+    data.append('catatan', $('#catatan').val())
 
     $.ajax({
       beforeSend: function() {

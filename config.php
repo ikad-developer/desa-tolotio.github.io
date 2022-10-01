@@ -178,8 +178,14 @@ function total_anggaran($id_kegiatan)
 
 function organisasi($jabatan)
 {
-	$calback = [];
 	$cari = query("SELECT * FROM `organisasi` WHERE jabatan = '$jabatan' ");
 	$data = mysqli_fetch_assoc($cari);
 	return $data['nama'];
+}
+
+function nik_organisasi($jabatan)
+{
+	$cari = query("SELECT * FROM `organisasi` WHERE jabatan = '$jabatan' ");
+	$data = mysqli_fetch_assoc($cari);
+	return $data['nik'];
 }

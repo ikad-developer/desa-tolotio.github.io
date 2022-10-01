@@ -33,6 +33,7 @@ $_SESSION['menu'] = 'surat';
             <option value="Surat Keterangan Profil Kerja">Surat Keterangan Profil Kerja</option>
             <option value="Surat Keterangan Kelakuan Baik">Surat Keterangan Kelakuan Baik</option>
             <option value="Surat Keterangan Jual Beli Tanah">Surat Keterangan Jual Beli Tanah</option>
+            <option value="Surat Rekomendasi">Surat Rekomendasi</option>
           </select>
         </div>
         <div id="komponen-surat"></div>

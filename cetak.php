@@ -15,8 +15,15 @@ $id = $_GET['nik']
   }
   </style>
 </head>
+<?php
+if ($kategori == 'surat-keterangan-jual-beli-tanah') {
+  $kertas = 'A4';
+} else {
+  $kertas = 'A4';
+}
+?>
 
-<body class="A4">
+<body class="<?= $kertas ?>">
   <?php
   switch ($kategori) {
     case 'surat-keterangan-tidak-mampu':
@@ -150,10 +157,53 @@ $id = $_GET['nik']
       }
       break;
 
+    case 'surat-keterangan-jual-beli-tanah':
+      require 'file-surat/surat-keterangan-jual-beli-tanah.php';
+      $cek = query("SELECT * FROM `surat_keluar` WHERE id = '$id' ");
+      if (mysqli_num_rows($cek) > 0) {
+        $data = mysqli_fetch_assoc($cek);
+        $no_surat = $data['no_surat'];
+        $kades = organisasi('kades');
+        $pemohon = $data['pemohon'];
+        $pemohon2 = $data['penerima'];
+        $tgl_cetak = $data['tanggal'];
+        $lokasi = $data['keterangan'];
+        $pecah = explode('||', $data['alasan']);
+        $ukuran = $pecah[0];
+        $harga = $pecah[1];
+        $utara = $pecah[2];
+        $selatan = $pecah[3];
+        $timur = $pecah[4];
+        $barat = $pecah[5];
+        $saksi1 = $pecah[6];
+        $saksi2 = $pecah[7];
+        surat_jual_beli_tanah($no_surat, $pemohon, $pemohon2, $kades, $tgl_cetak, $lokasi, $ukuran, $harga, $utara, $selatan, $timur, $barat, $saksi1, $saksi2);
+      } else {
+        echo '<h2>Data surat tidak ditemukan</h2>';
+      }
+      break;
+    case 'surat-rekomendasi':
+      require 'file-surat/surat-rekomendasi.php';
+      $cek = query("SELECT * FROM `surat_keluar` WHERE id = '$id' ");
+      if (mysqli_num_rows($cek) > 0) {
+        $data = mysqli_fetch_assoc($cek);
+        $no_surat = $data['no_surat'];
+        $kades = organisasi('kades');
+        $pemohon = $data['pemohon'];
+        $tgl_cetak = $data['tanggal'];
+        rekomendasi($no_surat, $kades, $pemohon, $tgl_cetak);
+      } else {
+        echo '<h2>Data surat tidak ditemukan</h2>';
+      }
+      break;
+
+
     default:
       echo 'Data surat tidak ditemukan';
   }
   ?>
+
+  <script src="https://use.fontawesome.com/bb35aee334.js"></script>
 </body>
 
 </html>
