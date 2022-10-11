@@ -4,12 +4,13 @@ require 'functions.php';
 
 <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item" role="presentation">
-    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Data Penduduk</a>
-  </li>
-  <li class="nav-item" role="presentation">
-    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Data KK</a>
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+      aria-selected="true">Data Penduduk</a>
   </li>
   <!-- <li class="nav-item" role="presentation">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Data KK</a>
+  </li>
+  <li class="nav-item" role="presentation">
     <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
   </li> -->
 </ul>
@@ -79,13 +80,26 @@ require 'functions.php';
       <input type="text" class="form-control" id="pekerjaan">
     </div>
   </div>
-
+  <div class="form-group">
+    <label for="status-hidup">Status</label>
+    <select class="form-control" id="status-hidup">
+      <option value="Hidup">Hidup</option>
+      <option value="Meninggal">Meninggal</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="kependudukan">Kependudukan</label>
+    <select class="form-control" id="kependudukan">
+      <option value="asli">Penduduk Desa Tolotio</option>
+      <option value="bukan penduduk">Bukan Penduduk Desa Tolotio</option>
+    </select>
+  </div>
   <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
   <!-- <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div> -->
 </div>
 
 <script>
-  $(document).ready(function() {
-    $('.form-control').attr('autocomplete', 'off');
-  })
+$(document).ready(function() {
+  $('.form-control').attr('autocomplete', 'off');
+})
 </script>

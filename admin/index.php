@@ -58,7 +58,7 @@ require 'functions.php';
           id="data-penduduk" data-url="data-penduduk/index.php"><i class="fa fa-users" aria-hidden="true"></i> Data
           Penduduk</a>
         <a class="list-group-item bg-primary menu text-white list-group-item-action list-group-item-light p-3" href="#"
-          id="surat" data-url="surat/index.php"><i class="fa fa-file" aria-hidden="true"></i> Surat</a>
+          id="surat" data-url="surat/index.php"><i class="fa fa-file" aria-hidden="true"></i> Dokumen Desa</a>
         <a class="list-group-item bg-primary menu text-white list-group-item-action list-group-item-light p-3" href="#"
           id="organisasi" data-url="organisasi/index.php"><i class="fa fa-database" aria-hidden="true"></i> Data
           Desa</a>

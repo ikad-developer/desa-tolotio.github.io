@@ -51,7 +51,7 @@ function keterangan_tidak_mampu($no_surat, $kades, $pemohon, $tgl_cetak)
     <tr style="border-bottom: 1px solid ;">
       <td>PADA TANGGAL</td>
       <td class="text-center">:</td>
-      <td><?= tgl_indo($tgl_cetak); ?></td>
+      <td><?= strtoupper(tgl_indo($tgl_cetak)); ?></td>
     </tr>
     <tr>
       <td colspan="3" style="padding-top: 25px;" class="text-center">KEPALA DESA TOLOTIO</td>

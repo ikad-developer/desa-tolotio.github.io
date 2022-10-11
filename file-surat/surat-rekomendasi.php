@@ -1,5 +1,5 @@
 <?php
-function rekomendasi($no_surat, $kades, $pemohon,  $tgl_cetak, $nik_kades)
+function rekomendasi($no_surat, $kades, $pemohon, $tgl_cetak)
 {
 ?>
 <section class="sheet padding-20mm">

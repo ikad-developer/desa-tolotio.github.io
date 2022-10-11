@@ -191,10 +191,27 @@ if ($kategori == 'surat-keterangan-jual-beli-tanah') {
         $kades = organisasi('kades');
         $pemohon = $data['pemohon'];
         $tgl_cetak = $data['tanggal'];
-        rekomendasi($no_surat, $kades, $pemohon, $tgl_cetak);
+        rekomendasi($no_surat, $kades, $pemohon,  $tgl_cetak);
       } else {
         echo '<h2>Data surat tidak ditemukan</h2>';
       }
+      break;
+
+    case 'surat-keterangan-tidak-mampu-dari-kadus':
+      require 'file-surat/surat-keterangan-tidak-mampu-kadus.php';
+      $cek = query("SELECT * FROM `surat_keluar` JOIN organisasi ON surat_keluar.keterangan = organisasi.keterangan WHERE surat_keluar.id = '$id' ");
+      if (mysqli_num_rows($cek) > 0) {
+        $data = mysqli_fetch_assoc($cek);
+        $no_surat = $data['no_surat'];
+        $kadus = $data['nama'];
+        $dusun = $data['keterangan'];
+        $pemohon = $data['pemohon'];
+        $tgl_cetak = $data['tanggal'];
+        keterangan_tidak_mampu_kadus($no_surat, $kadus, $pemohon, $tgl_cetak, $dusun);
+      } else {
+        echo '<h2>Data surat tidak ditemukan</h2>';
+      }
+
       break;
 
 

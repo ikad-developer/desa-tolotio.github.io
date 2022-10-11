@@ -84,10 +84,21 @@ function tgl_indo($tanggal)
 	return $pecahkan[2] . ' ' . $bulan[(int)$pecahkan[1]] . ' ' . $pecahkan[0];
 }
 
+function data_sampah($nik)
+{
+	global $basis_url;
+	return json_decode(file_get_contents($basis_url . "data-sampah/$nik.json"), true);
+}
+
 function penduduk($nik)
 {
 	if ($nik != '') {
-		$data = mysqli_fetch_assoc(query("SELECT * FROM `penduduk` WHERE nik = '$nik' "));
+		$cek = query("SELECT * FROM `penduduk` WHERE nik = '$nik' ");
+		if (mysqli_num_rows($cek) > 0) {
+			$data = mysqli_fetch_assoc($cek);
+		} else {
+			$data = data_sampah($nik);
+		}
 		$data = [
 			"nik" => $data['nik'],
 			"nama" => $data['nama'],
@@ -119,13 +130,13 @@ function penduduk($nik)
 
 function keluarga($kk)
 {
-	$cari = query("SELECT * FROM `kartu_keluarga` WHERE no_kk = '$kk' ");
+	$cari = query("SELECT * FROM `penduduk` WHERE no_kk = '$kk' AND hubungan_dalam_keluarga = 'Kepala Keluarga' ");
 	if (mysqli_num_rows($cari) > 0) {
 		$data = mysqli_fetch_assoc($cari);
-		$penduduk = penduduk($data['kepala_kk']);
+		// $penduduk = penduduk($data['kepala_kk']);
 		$detail = [
-			"kepala-kk" => $penduduk['nama'],
-			"nik-kk" => $penduduk['nik']
+			"kepala-kk" => $data['nama'],
+			"nik-kk" => $data['nik']
 		];
 	} else {
 		$data = mysqli_fetch_assoc($cari);
@@ -188,4 +199,17 @@ function nik_organisasi($jabatan)
 	$cari = query("SELECT * FROM `organisasi` WHERE jabatan = '$jabatan' ");
 	$data = mysqli_fetch_assoc($cari);
 	return $data['nik'];
+}
+
+function bersihkan($kalimat)
+{
+	global $koneksi;
+	return mysqli_real_escape_string($koneksi, $kalimat);
+}
+
+function cek_organisasi($posisi)
+{
+	$cek = query("SELECT * FROM `organisasi` WHERE jabatan = '$posisi' ");
+	$data = mysqli_fetch_assoc($cek);
+	return ["nama" => $data['nama'], "profil" => $data['foto'], "nik" => $data['nik']];
 }

@@ -10,6 +10,7 @@ if (isset($_POST['kategori-surat'])) {
   <label for="no-surat" class="col-sm-4 col-form-label">Nomor Surat</label>
   <div class="col-sm-8">
     <input type="text" class="form-control" id="no-surat">
+    <a href="#" id="riwayat" style="font-size:10pt">Lihat Riwayat Nomor Surat</a>
   </div>
 </div>
 <div class="form-group row">
@@ -60,6 +61,7 @@ if (isset($_POST['kategori-surat'])) {
   <label for="no-surat" class="col-sm-4 col-form-label">Nomor Surat</label>
   <div class="col-sm-8">
     <input type="text" class="form-control" id="no-surat">
+    <a href="#" id="riwayat" style="font-size:10pt">Lihat Riwayat Nomor Surat</a>
   </div>
 </div>
 <div class="form-group row">
@@ -89,6 +91,7 @@ if (isset($_POST['kategori-surat'])) {
   <label for="no-surat" class="col-sm-4 col-form-label">Nomor Surat</label>
   <div class="col-sm-8">
     <input type="text" class="form-control" id="no-surat">
+    <a href="#" id="riwayat" style="font-size:10pt">Lihat Riwayat Nomor Surat</a>
   </div>
 </div>
 <div class="form-group row">
@@ -152,6 +155,7 @@ if (isset($_POST['kategori-surat'])) {
   <label for="no-surat" class="col-sm-4 col-form-label">Nomor Surat</label>
   <div class="col-sm-8">
     <input type="text" class="form-control" id="no-surat">
+    <a href="#" id="riwayat" style="font-size:10pt">Lihat Riwayat Nomor Surat</a>
   </div>
 </div>
 <div class="form-group row">
@@ -192,6 +196,7 @@ if (isset($_POST['kategori-surat'])) {
   <label for="no-surat" class="col-sm-4 col-form-label">Nomor Surat</label>
   <div class="col-sm-8">
     <input type="text" class="form-control" id="no-surat">
+    <a href="#" id="riwayat" style="font-size:10pt">Lihat Riwayat Nomor Surat</a>
   </div>
 </div>
 <div class="form-group row">
@@ -208,7 +213,8 @@ if (isset($_POST['kategori-surat'])) {
     <input type="date" class="form-control" id="tanggal" value="<?= date('Y-m-d') ?>">
   </div>
 </div>
-<button type="button" class="btn btn-primary btn-block simpan-cetak" id="keterangan-tidak-mampu">Simpan & Cetak</button>
+<button type="button" class="btn btn-primary btn-block" id="simpan-cetak" id-surat="keterangan-tidak-mampu">Simpan &
+  Cetak</button>
 <div class="alert alert-primary mt-2" id="notif" role="alert" style="display:none">
   Jika terjadi kesalahan pada surat, silahkan diedit dan dicetak ulang di tab menu Surat Keluar
 </div>
@@ -247,7 +253,8 @@ if (isset($_POST['kategori-surat'])) {
     <input type="date" class="form-control" id="tanggal" value="<?= date('Y-m-d') ?>">
   </div>
 </div>
-<button type="button" class="btn btn-primary btn-block simpan-cetak" id="surat-kuasa">Simpan & Cetak</button>
+<button type="button" class="btn btn-primary btn-block" id="simpan-cetak" id-surat="surat-kuasa">Simpan &
+  Cetak</button>
 <div class="alert alert-primary mt-2" id="notif" role="alert" style="display:none">
   Jika terjadi kesalahan pada surat, silahkan diedit dan dicetak ulang di tab menu Surat Keluar
 </div>
@@ -260,6 +267,7 @@ if (isset($_POST['kategori-surat'])) {
   <label for="no-surat" class="col-sm-4 col-form-label">Nomor Surat</label>
   <div class="col-sm-8">
     <input type="text" class="form-control" id="no-surat">
+    <a href="#" id="riwayat" style="font-size:10pt">Lihat Riwayat Nomor Surat</a>
   </div>
 </div>
 <div class="form-group row">
@@ -276,7 +284,8 @@ if (isset($_POST['kategori-surat'])) {
     <input type="date" class="form-control" id="tanggal" value="<?= date('Y-m-d') ?>">
   </div>
 </div>
-<button type="button" class="btn btn-primary btn-block simpan-cetak" id="surat-keterangan-profil-kerja">Simpan &
+<button type="button" class="btn btn-primary btn-block" id="simpan-cetak"
+  id-surat="surat-keterangan-profil-kerja">Simpan &
   Cetak</button>
 <div class="alert alert-primary mt-2" id="notif" role="alert" style="display:none">
   Jika terjadi kesalahan pada surat, silahkan diedit dan dicetak ulang di tab menu Surat Keluar
@@ -290,6 +299,7 @@ if (isset($_POST['kategori-surat'])) {
   <label for="no-surat" class="col-sm-4 col-form-label">Nomor Surat</label>
   <div class="col-sm-8">
     <input type="text" class="form-control" id="no-surat">
+    <a href="#" id="riwayat" style="font-size:10pt">Lihat Riwayat Nomor Surat</a>
   </div>
 </div>
 <div class="form-group row">
@@ -306,7 +316,8 @@ if (isset($_POST['kategori-surat'])) {
     <input type="date" class="form-control" id="tanggal" value="<?= date('Y-m-d') ?>">
   </div>
 </div>
-<button type="button" class="btn btn-primary btn-block simpan-cetak" id="surat-keterangan-kelakuan-baik">Simpan &
+<button type="button" class="btn btn-primary btn-block" id="simpan-cetak"
+  id-surat="surat-keterangan-kelakuan-baik">Simpan &
   Cetak</button>
 <div class="alert alert-primary mt-2" id="notif" role="alert" style="display:none">
   Jika terjadi kesalahan pada surat, silahkan diedit dan dicetak ulang di tab menu Surat Keluar
@@ -320,6 +331,7 @@ if (isset($_POST['kategori-surat'])) {
   <label for="no-surat" class="col-sm-4 col-form-label">Nomor Surat</label>
   <div class="col-sm-8">
     <input type="text" class="form-control" id="no-surat">
+    <a href="#" id="riwayat" style="font-size:10pt">Lihat Riwayat Nomor Surat</a>
   </div>
 </div>
 <div class="form-group row">
@@ -410,7 +422,8 @@ if (isset($_POST['kategori-surat'])) {
     <input type="date" class="form-control" id="tanggal" value="<?= date('Y-m-d') ?>">
   </div>
 </div>
-<button type="button" class="btn btn-primary mb-2 btn-block simpan-cetak" id="surat-keterangan-jual-beli-tanah">Simpan &
+<button type="button" class="btn btn-primary mb-2 btn-block" id="simpan-cetak"
+  id-surat="surat-keterangan-jual-beli-tanah">Simpan &
   Cetak</button>
 <div class="alert alert-primary mt-2" id="notif" role="alert" style="display:none">
   Jika terjadi kesalahan pada surat, silahkan diedit dan dicetak ulang di tab menu Surat Keluar
@@ -424,6 +437,7 @@ if (isset($_POST['kategori-surat'])) {
   <label for="no-surat" class="col-sm-4 col-form-label">Nomor Surat</label>
   <div class="col-sm-8">
     <input type="text" class="form-control" id="no-surat">
+    <a href="#" id="riwayat" style="font-size:10pt">Lihat Riwayat Nomor Surat</a>
   </div>
 </div>
 <div class="form-group row">
@@ -453,7 +467,117 @@ if (isset($_POST['kategori-surat'])) {
     <input type="date" class="form-control" id="tanggal" value="<?= date('Y-m-d') ?>">
   </div>
 </div>
-<button type="button" class="btn btn-primary mb-2 btn-block simpan-cetak" id="surat-rekomendasi">Simpan &
+<button type="button" class="btn btn-primary mb-2 btn-block" id="simpan-cetak" id-surat="surat-rekomendasi">Simpan &
+  Cetak</button>
+<div class="alert alert-primary mt-2" id="notif" role="alert" style="display:none">
+  Jika terjadi kesalahan pada surat, silahkan diedit dan dicetak ulang di tab menu Surat Keluar
+</div>
+<?php
+      break;
+
+    case 'Surat Keterangan Ahli Waris':
+    ?>
+<div class="form-group row">
+  <label for="no-surat" class="col-sm-4 col-form-label">Nomor Surat</label>
+  <div class="col-sm-8">
+    <input type="text" class="form-control" id="no-surat">
+    <a href="#" id="riwayat" style="font-size:10pt">Lihat Riwayat Nomor Surat</a>
+  </div>
+</div>
+<div class="form-group row">
+  <label for="nama-pemohon" class="col-sm-4 col-form-label">Nama Pemohon</label>
+  <div class="col-sm-8">
+    <input type="text" class="form-control" id="nama-pemohon">
+    <div id="hasil-pemohon">
+    </div>
+  </div>
+</div>
+<div class="form-group row">
+  <label for="tanggal" class="col-sm-4 col-form-label">Tanggal Cetak</label>
+  <div class="col-sm-8">
+    <input type="date" class="form-control" id="tanggal" value="<?= date('Y-m-d') ?>">
+  </div>
+</div>
+<button type="button" class="btn btn-primary mb-2 btn-block" id="simpan-cetak"
+  id-surat="surat-keterangan-ahli-waris">Simpan &
+  Download</button>
+<div class="alert alert-primary mt-2" id="notif" role="alert" style="display:none">
+  Jika terjadi kesalahan pada surat, silahkan diedit dan dicetak ulang di tab menu Surat Keluar
+</div>
+<?php
+      break;
+    case 'Surat Izin Keramaian Pesta':
+    ?>
+<div class="form-group row">
+  <label for="no-surat" class="col-sm-4 col-form-label">Nomor Surat</label>
+  <div class="col-sm-8">
+    <input type="text" class="form-control" id="no-surat">
+    <a href="#" id="riwayat" style="font-size:10pt">Lihat Riwayat Nomor Surat</a>
+  </div>
+</div>
+<div class="form-group row">
+  <label for="nama-pemohon" class="col-sm-4 col-form-label">Nama Pemohon</label>
+  <div class="col-sm-8">
+    <input type="text" class="form-control" id="nama-pemohon">
+    <div id="hasil-pemohon">
+    </div>
+  </div>
+</div>
+<div class="form-group row">
+  <label for="tanggal" class="col-sm-4 col-form-label">Tanggal Cetak</label>
+  <div class="col-sm-8">
+    <input type="date" class="form-control" id="tanggal" value="<?= date('Y-m-d') ?>">
+  </div>
+</div>
+<button type="button" class="btn btn-primary mb-2 btn-block" id="simpan-cetak"
+  id-surat="surat-izin-keramaian-pesta">Simpan &
+  Download</button>
+<div class="alert alert-primary mt-2" id="notif" role="alert" style="display:none">
+  Jika terjadi kesalahan pada surat, silahkan diedit dan dicetak ulang di tab menu Surat Keluar
+</div>
+<?php
+      break;
+    case 'Surat Keterangan Tidak Mampu Dari Kadus':
+    ?>
+<div class="form-group row">
+  <label for="no-surat" class="col-sm-4 col-form-label">Nomor Surat</label>
+  <div class="col-sm-8">
+    <input type="text" class="form-control" id="no-surat">
+    <a href="#" id="riwayat" style="font-size:10pt">Lihat Riwayat Nomor Surat</a>
+  </div>
+</div>
+<div class="form-group row">
+  <label for="nama-pemohon" class="col-sm-4 col-form-label">Nama Pemohon</label>
+  <div class="col-sm-8">
+    <input type="text" class="form-control" id="nama-pemohon">
+    <div id="hasil-pemohon">
+    </div>
+  </div>
+</div>
+<div class="form-group row">
+  <label for="alasan" class="col-sm-4 col-form-label">Dusun</label>
+  <div class="col-sm-8">
+    <select class="form-control" id="alasan">
+      <?php
+            $cek_dusun = query("SELECT * FROM `organisasi` WHERE jabatan LIKE 'kadus%' ");
+            while ($dusun = mysqli_fetch_assoc($cek_dusun)) {
+            ?>
+      <option value="<?= $dusun['keterangan']; ?>"><?= $dusun['keterangan']; ?></option>
+      <?php
+            }
+            ?>
+    </select>
+  </div>
+</div>
+<div class="form-group row">
+  <label for="tanggal" class="col-sm-4 col-form-label">Tanggal Cetak</label>
+  <div class="col-sm-8">
+    <input type="date" class="form-control" id="tanggal" value="<?= date('Y-m-d') ?>">
+  </div>
+</div>
+<button type="button" class="btn btn-primary mb-2 btn-block" id="simpan-cetak"
+  id-surat="surat-keterangan-tidak-mampu-dari-kadus">Simpan
+  &
   Cetak</button>
 <div class="alert alert-primary mt-2" id="notif" role="alert" style="display:none">
   Jika terjadi kesalahan pada surat, silahkan diedit dan dicetak ulang di tab menu Surat Keluar
@@ -461,6 +585,7 @@ if (isset($_POST['kategori-surat'])) {
 <?php
       break;
   }
+  unset($_POST['kategori-surat']);
 }
 
 if (isset($_POST['cari-identitas'])) {
@@ -491,10 +616,40 @@ if (isset($_POST['cari-identitas'])) {
 }
 ?>
 
+<div class="modal fade" id="modal-riwayat-no-surat" tabindex="-1" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-body" id="body-modal-riwayat-surat">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script>
 $(document).ready(function() {
 
   $('.form-control').attr('autocomplete', 'off');
+
+  $('#riwayat').click(function(e) {
+    e.preventDefault();
+    var surat = $('#jenis-surat').val();
+    $('#modal-riwayat-no-surat').modal('show');
+    $.ajax({
+      beforeSend: function() {
+        $('#body-modal-riwayat-surat').html('<h5>Meload riwayat nomor surat...</h5>')
+      },
+      url: 'surat/riwayat-no-surat.php',
+      type: 'post',
+      data: 'jenis-surat=' + surat,
+      success: function(respon) {
+        $('#body-modal-riwayat-surat').html(respon);
+      }
+    })
+  })
 
   $('.pilih-nama').click(function() {
     var nama = $(this).text();
@@ -611,7 +766,9 @@ $(document).ready(function() {
           showConfirmButton: false,
           timer: 1500
         })
-        window.open(pecah[2], '_blank');
+        if (pecah[0] == 'success') {
+          window.open(pecah[2], '_blank');
+        }
         $('#notif').show();
       }
     })
@@ -684,8 +841,9 @@ $(document).ready(function() {
     })
   })
 
-  $('.simpan-cetak').click(function() {
-    var keteranganSurat = $(this).attr('id');
+  $('#simpan-cetak').click(function(e) {
+    e.stopPropagation();
+    var keteranganSurat = $(this).attr('id-surat');
     var alasan = $('#luas-tanah').val() + '||' + $('#harga').val() + '||' + $('#batas-utara').val() + '||' + $(
       '#batas-selatan').val() + '||' + $('#batas-timur').val() + '||' + $('#batas-barat').val() + '||' + $(
       '#saksi1').val() + '||' + $('#saksi2').val();
@@ -697,7 +855,7 @@ $(document).ready(function() {
     data.append('keterangan', $('#alasan').val());
     data.append('penerima', $('#nama-ortu').attr('data-nik'));
     data.append('catatan-jual', alasan);
-    data.append('catatan', $('#catatan').val())
+    data.append('catatan', $('#catatan').val());
 
     $.ajax({
       beforeSend: function() {
@@ -710,7 +868,6 @@ $(document).ready(function() {
       contentType: false,
       success: function(responHasil) {
         var pecah = responHasil.split('|');
-        window.open(pecah[2], '_blank');
         Swal.fire({
           position: 'center',
           icon: pecah[0],
@@ -719,6 +876,16 @@ $(document).ready(function() {
           timer: 1500
         })
         $('#notif').show();
+        if (pecah[0] == 'success') {
+          window.open(pecah[2], '_blank');
+        }
+        setTimeout(function() {
+          location.reload();
+        }, 2000);
+        // $('#cetak-dokumen').remove()
+        // $('.simpan-cetak').after('<a class="btn btn-primary btn-block" id="cetak-dokumen" href="' + pecah[
+        //   2] + '" target="_blank" role="button">Cetak</a>');
+        // $('.simpan-cetak').hide();
       }
     })
   })

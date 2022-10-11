@@ -11,7 +11,7 @@ if (isset($_POST['login'])) {
     if ($data['status'] == 'aktif') {
       if ($data['password'] == $password) {
         $_SESSION['id'] = $data['id'];
-        $_SESSION['nama'] = penduduk($data['nik'])['nama'];
+        $_SESSION['nama'] = $data['nama'];
         $_SESSION['menu'] = 'beranda';
         $_SESSION['nik'] = $data['nik'];
         echo 'Berhasil||Login berhasil||success';

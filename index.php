@@ -44,7 +44,10 @@
               <a class="nav-link" href="#" data-url="struktur-organisasi.php"
                 data-parent="parent-struktur-organisasi">Struktur Organisasi</a>
             </li>
-            <li class="nav-item parent-dana-desa">
+            <li class="nav-item parent-peta-penduduk">
+              <a class="nav-link" href="#" data-url="peta-penduduk.php" data-parent="parent-peta-penduduk">Penduduk</a>
+            </li>
+            <!--<li class="nav-item parent-dana-desa">
               <a class="nav-link" href="#" data-url="dana-desa.php" data-parent="parent-dana-desa">Dana Desa</a>
             </li>
             <li class="nav-item parent-kegiatan">
@@ -52,7 +55,7 @@
             </li>
             <li class="nav-item parent-bumdes">
               <a class="nav-link" href="#" data-url="bumdes.php" data-parent="parent-bumdes">BUMDES</a>
-            </li>
+            </li> -->
           </ul>
 
         </div>
@@ -90,7 +93,7 @@
             <div class="input-group-prepend">
               <div class="input-group-text"><i class="fa fa-user" aria-hidden="true"></i></div>
             </div>
-            <input type="text" class="form-control form-login" id="username" value="TOLOTIO-" placeholder="TOLOTIO-01">
+            <input type="text" class="form-control form-login" id="username" value="" placeholder="Username">
           </div>
           <div class="input-group mb-2 mr-sm-2">
             <div class="input-group-prepend">
@@ -117,7 +120,7 @@
   <script src="js/f83cbade83.js"></script>
   <script src="js/jquery.easy-ticker.js"></script>
   <script src="js/sweetalert2@11.js"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.js"></script>
   <script>
   $(document).ready(function() {
 
