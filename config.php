@@ -1,5 +1,5 @@
 <?php
-$koneksi = mysqli_connect("localhost", "root", "", "Tolotio");
+$koneksi = mysqli_connect("103.164.54.128", "u4maawj3_tolotio", "[%ot58gG9H.w", "u4maawj3_tolotio");
 
 $basis_url = 'http://localhost/desa-tolotio/';
 
